@@ -11,10 +11,12 @@
     <div id="Div"></div>
 </body>
 <script>
-   usuario = window.prompt('qual é seu nome?')
+    document.getElementById("Div").innerHTML = localStorage.nome
+    
+    usuario = window.prompt('qual é seu nome?')
 
     localStorage.nome = usuario
 
-    document.getElementById("Div").innerHTML = localStorage.nome
+   
 </script>
 </html>
