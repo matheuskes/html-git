@@ -11,7 +11,9 @@
     <div id="Div"></div>
 </body>
 <script>
-    localStorage.nome = "Matheus"
+   usuario = window.prompt('qual é seu nome?')
+
+    localStorage.nome = usuario
 
     document.getElementById("Div").innerHTML = localStorage.nome
 </script>
