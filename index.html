@@ -19,7 +19,9 @@
     }
 
     function caregar() {
-        document.getElementById("dado").value = localStorage.info
+        if (localStorage.info){
+            document.getElementById("dado").value = localStorage.info
+        }
     }
 </script>
 </html>
