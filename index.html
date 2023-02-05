@@ -7,16 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>testando</h1>
-    <div id="Div"></div>
+    <h3>Salvando ddos no navegador</h3>
+    <label>Informe o dado</label>
+    <input id="dado"><br>
+    <button type="button" onclick="salvar()">Salvar</button>
+    <button type="button" onclick="caregar()">Caregar</button>
 </body>
 <script>
-    document.getElementById("Div").innerHTML = localStorage.nome
-    
-    usuario = window.prompt('qual é seu nome?')
+    function salvar() {
+        localStorage.info = document.getElementById("dado").value
+    }
 
-    localStorage.nome = usuario
-
-   
+    function caregar() {
+        document.getElementById("dado").value = localStorage.info
+    }
 </script>
 </html>
