@@ -22,8 +22,9 @@
 
     function caregar() {
         var tela = document.getElementById("tela")
-        if (localStorage.info = undefined) {
+        if (localStorage.info = "undefined") {
             window.alert('você não salvou nada')
+            tala.innerText = ""
         } else{
             tela.innerText = localStorage.info
         }
