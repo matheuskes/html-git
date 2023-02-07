@@ -12,6 +12,8 @@
     <input id="dado"><br>
     <button type="button" onclick="salvar()">Salvar</button>
     <button type="button" onclick="caregar()">Caregar</button>
+    <button type="button" onclick="deletar()">Deletar</button>
+    <div id="tela">___________</div>
 </body>
 <script>
     function salvar() {
@@ -19,9 +21,25 @@
     }
 
     function caregar() {
-        if (localStorage.info){
-            document.getElementById("dado").value = localStorage.info
-        }
+        var tela = document.getElementById("tela")
+        tela.innerText = localStorage.info
+    }
+
+    function deletar() {
+        localStorage.clear()
+        tela.innerText = ""
     }
 </script>
+
+<style>
+    #tela {
+        width: 100px;
+        height: 20px;
+        margin: 0px auto;
+        background-color: rgb(173, 173, 173);
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+</style>
 </html>
