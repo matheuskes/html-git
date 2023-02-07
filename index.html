@@ -22,7 +22,11 @@
 
     function caregar() {
         var tela = document.getElementById("tela")
-        tela.innerText = localStorage.info
+        if (localStorage.info == 'undefined') {
+            window.alert('você não salvou nada')
+        } else{
+            tela.innerText = localStorage.info
+        }
     }
 
     function deletar() {
